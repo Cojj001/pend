@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { io } from "socket.io-client";
 import axios from "axios";
 import { showNotification } from "../utils/notifications";
-import { logActivity } from "../../utils/activityLogger";
+import { logActivity } from "../utils/activityLogger";
 
 const socket = io();
 

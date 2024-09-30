@@ -52,13 +52,11 @@
 
 // export default TaskCard;
 
-
 "use client";
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Calendar, Clock, MessageSquare, CheckCircle } from "lucide-react";
-import { format } from "date-fns";
 import styles from "../styles/TaskCard.module.css";
 
 function PriorityBadge({ priority }) {
@@ -97,6 +95,18 @@ function MilestoneTracker({ milestones }) {
   );
 }
 
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const months = [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+  ];
+  const month = months[date.getMonth()];
+  const day = date.getDate();
+  const year = date.getFullYear();
+  return `${month} ${day}, ${year}`;
+}
+
 export default function TaskCard({ task }) {
   const [isHovered, setIsHovered] = useState(false);
   const [showComments, setShowComments] = useState(false);
@@ -113,7 +123,7 @@ export default function TaskCard({ task }) {
   } = task;
 
   return (
-    <div >
+    <div>
       <motion.article
         className={`${styles.card} ${styles[priority.toLowerCase()]}`}
         whileHover={{ scale: 1.02 }}
@@ -129,11 +139,11 @@ export default function TaskCard({ task }) {
           <div className={styles.details}>
             <div className={styles.detailItem}>
               <Calendar className={styles.icon} />
-              <span>Created: {format(new Date(createdAt), "MMM d, yyyy")}</span>
+              <span>Created: {formatDate(createdAt)}</span>
             </div>
             <div className={styles.detailItem}>
               <Clock className={styles.icon} />
-              <span>Due: {format(new Date(dueDate), "MMM d, yyyy")}</span>
+              <span>Due: {formatDate(dueDate)}</span>
             </div>
             <div
               className={`${styles.statusBadge} ${
