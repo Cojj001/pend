@@ -1,0 +1,137 @@
+.dashboard {
+  position: relative;
+  /* background-color: var(--bg-color2); */
+  color: var(--copy);
+  padding: 50px;
+  width: 100%;
+  min-height: 100%;
+  min-width: 60dvw;
+  border-radius: 7px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: thin solid var(--pri-color);
+}
+
+.dashboard_head {
+  color: var(--copy);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  /* padding: 20px; */
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+
+  font-size: 1.6rem;
+  font-family: var(--heading-font);
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.greeting p {
+margin: 0;
+padding: 0;
+font-family: var(--normal-font);
+color: var(--copy-light);
+font-size: 12px;
+line-height: 15px;
+}
+
+.greeting h1 {
+  color: var(--copy);
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: 0px;
+
+  letter-spacing: 3px;
+  pointer-events: none;
+}
+
+.addTaskButton {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary);
+  color: var(--copy);
+  border: none;
+  padding: 5px 5px;
+  border-radius: 99999px;
+  cursor: pointer;
+  font-size: 1.5rem;
+
+
+  transition: all 0.2s ease-in-out;
+}
+
+.addTaskButton:hover {
+  transform: translateY(-3px);
+  background-color: var(--pri-color);
+  border: thin solid var(--pri-color);
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-family: var(--heading-font);
+}
+
+.taskList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.priorityContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.prioritySection {
+  margin-bottom: 20px;
+}
+
+.prioritySection h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.dashboard_overview {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  text-transform: capitalize;
+  margin-bottom: 70px;
+
+}
+
+.overview {
+  display: flex;
+  gap: 20px;
+}
+
+.task_form {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

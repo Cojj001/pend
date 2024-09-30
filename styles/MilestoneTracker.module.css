@@ -1,0 +1,17 @@
+.tracker {
+  display: flex;
+  flex-direction: column;
+}
+
+.milestone {
+  margin-bottom: 4px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #28a745;
+}
+
+.incomplete {
+  color: #dc3545;
+}

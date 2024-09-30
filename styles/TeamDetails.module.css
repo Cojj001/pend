@@ -1,0 +1,149 @@
+.teamDetailsContainer {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.teamName {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.teamInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.memberList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.memberItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  animation: slideIn 0.3s ease-out;
+}
+
+.memberInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.memberName {
+  font-weight: bold;
+  color: #333;
+}
+
+.memberEmail {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.removeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.removeButton:hover {
+  color: #e74c3c;
+}
+
+.addMemberForm {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.addButton:hover {
+  background-color: #45a049;
+}
+
+.loadingContainer,
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.loadingSpinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .teamDetailsContainer {
+    padding: 1rem;
+  }
+
+  .addMemberForm {
+    flex-direction: column;
+  }
+
+  .addButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,21 @@
+.btn {
+  background-color: var(--primary);
+  padding: 10px 25px;
+  border-radius: 7px;
+  color: white;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: var(--normal-font);
+}
+
+.btn:hover {
+  transform: translateY(3px);
+}
+

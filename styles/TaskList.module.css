@@ -1,0 +1,36 @@
+.taskList {
+  display: flex;
+
+  gap: 2.5rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 2rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .taskList {
+    grid-template-columns: 1fr;
+  }
+}

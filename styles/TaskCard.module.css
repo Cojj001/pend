@@ -1,0 +1,149 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 1rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 28rem;
+  /* background-color: white; */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color: var(--copy);
+}
+
+.content {
+  padding: 1.9rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+  font-weight: light;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .92rem;
+  margin-bottom: 2rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  font-size: 0.695rem;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.priorityBadge,
+.statusBadge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.low { background-color: rgba(78, 146, 255, 0.623); }
+.medium { background-color: rgba(255, 177, 32, 0.616); }
+.high { background-color: rgba(252, 87, 58, 0.712); }
+
+.notstarted { background-color: #6b7280; }
+.inprogress { background-color: #3b83f6da; }
+.completed { background-color: #03a848; }
+
+.milestoneTracker {
+  margin-top: 1rem;
+}
+
+.milestoneTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.milestoneList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.milestone {
+  display: flex;
+  align-items: center;
+}
+
+.milestoneIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.milestoneIcon.completed {
+  color: #0bc433;
+}
+
+.milestoneText {
+  font-size: 0.875rem;
+}
+
+.milestoneText.completedText {
+  text-decoration: line-through;
+}
+
+.commentsSection {
+  margin-top: 1rem;
+}
+
+.commentsToggle {
+  display: flex;
+  align-items: center;
+  color: #3b82f6;
+  font-size: 0.875rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.commentsToggle:hover {
+  color: #2563eb;
+}
+
+.commentsList {
+  margin-top: 0.5rem;
+}
+
+.comment {
+  background-color: #f3f4f6;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.card.low { border-top: 4px solid #3b82f6; }
+.card.medium { border-top: 4px solid #f59e0b; }
+.card.high { border-top: 4px solid #ef4444; }

@@ -1,0 +1,76 @@
+.milestonesView {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.milestoneList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.milestoneItem {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.milestoneItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.milestoneItem.completed {
+  background-color: #e6f3e6;
+}
+
+.icon {
+  margin-right: 12px;
+  color: #4dabf7;
+}
+
+.completed .icon {
+  color: #40c057;
+}
+
+.text {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #495057;
+}
+
+.completed .text {
+  text-decoration: line-through;
+  color: #868e96;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.milestoneItem {
+  animation: fadeIn 0.3s ease-out;
+}
